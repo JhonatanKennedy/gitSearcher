@@ -1,0 +1,25 @@
+.dashboard-container{
+    margin-top: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+img{
+    margin: 0px 10px;
+    height: 12vw;
+    border-radius: 50%;
+}
+
+.dashboard-container a{
+    width: 100%;
+    border:1px solid black;
+    border-right: none;
+    border-left: none;
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+
+

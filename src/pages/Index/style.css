@@ -1,0 +1,25 @@
+body{
+    font-size: 1.2rem;
+}
+span{
+    font-size: 1em;
+}
+
+
+@media only screen and (min-width:375px){
+    body{
+        font-size: 1.4rem;
+    }
+    span{
+        font-size: 1.2em;
+    }
+} 
+
+@media only screen and (min-width:768px){
+    body{
+        font-size: 1.6rem;
+    }
+    span{
+        font-size: 1.4em;
+    }
+} 

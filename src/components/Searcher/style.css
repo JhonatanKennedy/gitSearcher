@@ -1,0 +1,45 @@
+input{
+    border: solid 1px #616161;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-right:#0B8043;
+}
+
+button{
+    border: solid 1px #0B8043;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    cursor: pointer;
+    background-color:#0B8043;
+}
+input:focus, button:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+} 
+.searcher-flex{
+    margin-top: 3vh;
+    border-radius: 5px;
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+}
+.searcher-flex:hover{
+    box-shadow: 16px 21px 25px -12px rgba(0,0,0,0.75);
+}
+
+.flex-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+}
+@media only screen and (min-width: 375px){
+    .flex-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+}
