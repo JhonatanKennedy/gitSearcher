@@ -4,7 +4,12 @@ body{
 span{
     font-size: 1em;
 }
-
+.container-ordenacao {
+    margin-left: 20vw;
+}
+.container-ordenacao button{
+    border-radius: 25px;
+}
 
 @media only screen and (min-width:375px){
     body{
@@ -12,6 +17,9 @@ span{
     }
     span{
         font-size: 1.2em;
+    }
+    .container-ordenacao {
+        margin-left: 5vw;
     }
 } 
 

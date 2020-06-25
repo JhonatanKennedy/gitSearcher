@@ -8,8 +8,10 @@ export default function Searcher({ callback }){
 
     async function handleSearch(e){
         e.preventDefault();
-        const search = await Api.get(`users/${user}`);
-        callback(search.data);
+        const profile = await Api.get(`users/${user}`);
+        const repos = await Api.get(`users/${user}/repos`);
+        const data = {profile,repos}
+        callback(data);
     }
 
     return(

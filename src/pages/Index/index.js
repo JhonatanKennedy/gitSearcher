@@ -7,12 +7,19 @@ import './style.css';
 export default function Index(){
     
     const [data,setData] = useState('');
-
+    const [ordenacao,setOrdenacao] = useState(true);
     return(
         <div>
             <Header/>
-            <Searcher callback={(data)=>{setData(data)}}/> 
-            {data && <Dashboard inf={data} />}
+            <Searcher callback={(data)=>{setData(data)}}/>
+            {data &&             
+                <div className="container-ordenacao">
+                    <span>Ordenar por: </span>
+                    <button onClick={()=>{setOrdenacao(false)}}>Data</button>
+                    <button onClick={()=>{setOrdenacao(true)}}>Decrescente</button>
+                </div>
+            }
+            {data && <Dashboard data={data} sort={ordenacao}/>}
             
         </div>
 
