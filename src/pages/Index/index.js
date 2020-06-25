@@ -15,8 +15,8 @@ export default function Index(){
             {data &&             
                 <div className="container-ordenacao">
                     <span>Ordenar por: </span>
-                    <button onClick={()=>{setOrdenacao(false)}}>Data</button>
-                    <button onClick={()=>{setOrdenacao(true)}}>Decrescente</button>
+                    <button onClick={()=>{setOrdenacao(true)}}>Crescente</button>
+                    <button onClick={()=>{setOrdenacao(false)}}>Decrescente</button>
                 </div>
             }
             {data && <Dashboard data={data} sort={ordenacao}/>}

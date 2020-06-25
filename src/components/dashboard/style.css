@@ -13,7 +13,7 @@ img{
 
 .dashboard-container a{
     width: 100%;
-    border:1px solid black;
+    border:1px solid #616161;
     border-right: none;
     border-left: none;
     text-decoration: none;
@@ -25,8 +25,8 @@ img{
     margin-top: 10vh;
 }
 .dashboard-repositories a{
-    border: 1px solid black;
-    width: auto;
+    border: none;
+    width: 90%;
 }
 
 ul{
@@ -38,8 +38,8 @@ li{
     display: flex;
     flex-direction: column;
     margin-top: 5vh;
-    border: 1px solid black;
+    border: 1px solid #616161;
     border-radius: 25px;
     padding: 5vw;
-    width: 99%;
+    width: 100%;
 }
