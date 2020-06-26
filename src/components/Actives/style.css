@@ -14,7 +14,9 @@
     justify-content: space-evenly;
     text-decoration: none;
     color:black;
-    border-radius: 25px;
+    border-radius: 50px;
+    border: 3px solid #3F51B5;
+    border-bottom-right-radius: 120px;
 }
 .actives-profile a:hover{
     box-shadow: 16px 21px 25px -12px rgba(0,0,0,0.75);

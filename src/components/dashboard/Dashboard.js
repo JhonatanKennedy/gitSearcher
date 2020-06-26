@@ -17,7 +17,8 @@ export default function Dashboard({ data, sort }){
 
     return(
         <div className='dashboard-container'>
-            <a href={profile.html_url}>   
+            <div className='dashboard-profile'>
+                <a href={profile.html_url}>   
                 <img src={profile.avatar_url} alt='profile'></img>
                     <div className='dashboard-profile-info'>
                         <strong>{profile.name}</strong><br></br>
@@ -26,7 +27,9 @@ export default function Dashboard({ data, sort }){
                         <span><strong>Following:</strong>{profile.following}</span><br></br>
                         <span><strong>Repositorios:</strong>{profile.public_repos}</span>
                     </div>
-                </a>
+                </a>                
+            </div>
+
         
             <div className='dashboard-repositories'>
                 <ul>

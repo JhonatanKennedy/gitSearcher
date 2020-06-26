@@ -12,7 +12,7 @@ export default function Actives(){
 
     return(
         <div className='actives-container'>
-            <h2><strong>Últimos usuários pesquisados.</strong></h2>
+            <h2><strong>Usuários mais ativos.</strong></h2>
             {reposSorted.map(users => (
                 <div className='actives-profile'> 
                     <a href={users.html_url} className='actives-profile'>
