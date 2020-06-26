@@ -5,10 +5,12 @@ span{
     font-size: 1em;
 }
 .container-ordenacao {
-    margin-left: 20vw;
+    display: flex;
+    justify-content: center;
 }
 .container-ordenacao button{
     border-radius: 25px;
+    margin:0px 0.5vw;
 }
 
 
@@ -18,9 +20,6 @@ span{
     }
     span{
         font-size: 1.2em;
-    }
-    .container-ordenacao {
-        margin-left: 5vw;
     }
 } 
 

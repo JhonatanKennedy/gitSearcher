@@ -6,7 +6,7 @@ import * as yup from 'yup';
 import './style.css';
 
 const validations = yup.object().shape({
-    user: yup.string().required()
+    user: yup.string().required('É necessário um usuário!')
 });
 
 export default function Searcher({ callback }){
@@ -33,9 +33,10 @@ export default function Searcher({ callback }){
                 bio:profile.data.bio,
                 followers: profile.data.followers,
                 following:  profile.data.following,
-                public_repos: profile.data.public_repos
-            };   
-
+                public_repos: profile.data.public_repos,
+                updated_at: profile.data.updated_at
+            };      
+            console.log(profile);
             if( queue.length < 5 && 
                 queue.map( obj => obj.id).indexOf(storageProfile.id) === -1){
                 setQueue([...queue,storageProfile]);

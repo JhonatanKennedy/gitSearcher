@@ -15,7 +15,7 @@ export default function Header(){
                 <Nav className='mr-auto'>
                     <Nav.Link as={Link} to='/'>Buscar</Nav.Link>
                     <Nav.Link as={Link} to='/lastSearches'>Últimas buscas</Nav.Link>
-                    <Nav.Link href='#Ranking'>Ranking</Nav.Link>
+                    <Nav.Link as={Link} to='/ranking'>Ranking</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Navbar>
