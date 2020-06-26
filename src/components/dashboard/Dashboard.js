@@ -2,11 +2,10 @@ import React from 'react';
 import './style.css';
 
 export default function Dashboard({ data, sort }){
-    
     const profile = data.profile.data;
     const repos = data.repos.data;
 
-    const reposSorted = repos.sort((a,b)=>{
+    const reposSorted = repos.sort((a,b) => {
             if(sort === true){
                 if (a.updated_at < b.updated_at) return -1;
                 if (a.updated_at > b.updated_at) return 1;
@@ -16,15 +15,13 @@ export default function Dashboard({ data, sort }){
             }
         });
 
-
-
     return(
         <div className='dashboard-container'>
             <a href={profile.html_url}>   
                 <img src={profile.avatar_url} alt='profile'></img>
                     <div className='dashboard-profile-info'>
                         <strong>{profile.name}</strong><br></br>
-                        <span>{profile.bio}</span><br></br>
+                        <span><strong>Bios:</strong>{profile.bio}</span><br></br>
                         <span><strong>Followers:</strong>{profile.followers}</span><br></br>
                         <span><strong>Following:</strong>{profile.following}</span><br></br>
                         <span><strong>Repositorios:</strong>{profile.public_repos}</span>
@@ -34,7 +31,7 @@ export default function Dashboard({ data, sort }){
             <div className='dashboard-repositories'>
                 <ul>
                     {reposSorted.map(repos =>(
-                        <a href={repos.url}>
+                        <a href={repos.html_url}>
                             <li key={repos.id}>
                                 <span><strong>Título:</strong>{repos.name}</span>
                                 <span><strong>Descrição:</strong>{repos.description}</span>

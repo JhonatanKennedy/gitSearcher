@@ -20,12 +20,9 @@ input:focus, button:focus {
     margin-top: 3vh;
     border-radius: 5px;
     width: 100vw;
-    height: 20vh;
+    height: 30vh;
     display: flex;
     justify-content: center;
-}
-.searcher-flex:hover{
-    box-shadow: 16px 21px 25px -12px rgba(0,0,0,0.75);
 }
 
 .flex-item{

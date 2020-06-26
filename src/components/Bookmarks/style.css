@@ -1,0 +1,27 @@
+.bookmark-container h2{
+    margin-top: 5vh;
+    text-align: center;
+    font-size: 1.6rem;
+}
+.bookmark-profile{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.bookmark-profile  a{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+    color:black;
+    border-radius: 25px;
+}
+.bookmark-profile a:hover{
+    box-shadow: 16px 21px 25px -12px rgba(0,0,0,0.75);
+}
+.bookmark-avatar{
+    width: 30vw;
+}
+.bookmark-info{
+    width: 70vw;
+}
