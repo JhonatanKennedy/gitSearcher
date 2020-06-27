@@ -11,14 +11,12 @@ export default function Index(){
     return(
         <div>
             <Header/>
-            <Searcher callback={(data)=>{setData(data)}}/>
-            {data &&             
+            <Searcher callback={(data)=>{setData(data)}}/>          
                 <div className="container-ordenacao">
                     <span>Ordenar por: </span>
                     <button onClick={()=>{setOrdenacao(true)}}>Crescente</button>
                     <button onClick={()=>{setOrdenacao(false)}}>Decrescente</button>
                 </div>
-            }
             {data && <Dashboard data={data} sort={ordenacao}/>}
             
         </div>

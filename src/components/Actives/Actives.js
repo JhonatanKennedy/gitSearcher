@@ -1,34 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
+import Api from '../../services/api';
 import './style.css'
 
+
 export default function Actives(){
-    const queue = JSON.parse(localStorage.getItem('profiles'));
+    const [users,setUsers] = useState({});
 
-    const reposSorted = queue.sort((a,b) => {
-        if (a.updated_at < b.updated_at) return 1;
-        if (a.updated_at > b.updated_at) return -1;
-    });
+    async function getUsers(){
+        try{
+            const req = await Api.get('search/users?q=repos%3A%3E%3D45000&sort=repositories&order=desc&');
+            setUsers(req.data);
+        }catch (err){
+            alert('Erro ao carregar, tente novamente!');
+        }
+    }
+    useEffect(() => {
+        getUsers();
+    },[]);
 
+    const usersActive = users.items;
 
     return(
         <div className='actives-container'>
-            <h2><strong>Usuários mais ativos.</strong></h2>
-            {reposSorted.map(users => (
-                <div className='actives-profile'> 
-                    <a href={users.html_url} className='actives-profile'>
-                        <div className='profile-avatar'>
-                            <img src={users.avatar_url} alt='profile'></img>
+            <h2><strong>Usuários mais ativos do git.</strong></h2>
+            {usersActive && usersActive.map((element,index) => (
+                <a href={element.html_url} key={element.id} className='actives-url'>
+                    <div className='actives-profile'>
+                        <div className='actives-avatar'>
+                            <span><strong>{index+1}º</strong></span>
+                            <img src={element.avatar_url} alt='profile'/>                            
                         </div>
-                        <div className='actives-info'>
-                            <strong>{users.name}</strong><br></br>
-                            <span><strong>Bios:</strong>{users.bio}</span><br></br>
-                            <span><strong>Followers:</strong>{users.followers}</span><br></br>
-                            <span><strong>Following:</strong>{users.following}</span><br></br>
-                            <span><strong>Repositorios:</strong>{users.public_repos}</span>                        
+                        <div className='active-profile-info'>
+                            <span><strong>{element.login}</strong></span>
                         </div>
-                        <span><strong>Last updated at:</strong>{users.updated_at.slice(0,10).replace(/-/g,'/')}</span>  
-                    </a>
-                </div>
+                    </div>
+                </a>
             ))}
         </div>
     )

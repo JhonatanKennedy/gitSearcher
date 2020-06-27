@@ -36,7 +36,7 @@ export default function Searcher({ callback }){
                 public_repos: profile.data.public_repos,
                 updated_at: profile.data.updated_at
             };      
-            console.log(profile);
+
             if( queue.length < 5 && 
                 queue.map( obj => obj.id).indexOf(storageProfile.id) === -1){
                 setQueue([...queue,storageProfile]);

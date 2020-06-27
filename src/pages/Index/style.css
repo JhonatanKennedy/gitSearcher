@@ -5,8 +5,11 @@ span{
     font-size: 1em;
 }
 .container-ordenacao {
+    height: 8vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+    box-shadow: 16px 21px 25px -12px rgba(0,0,0,0.75);
 }
 .container-ordenacao button{
     border-radius: 25px;

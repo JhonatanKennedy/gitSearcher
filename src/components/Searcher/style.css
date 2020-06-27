@@ -12,7 +12,7 @@ button{
     cursor: pointer;
     background-color:#0B8043;
     color:black;
-    transition: 500ms background,color;
+    transition: 500ms background,color,border-color;
 }
 
 button:hover{
@@ -29,9 +29,10 @@ input:focus, button:focus {
     margin-top: 3vh;
     border-radius: 5px;
     width: 100vw;
-    height: 30vh;
+    height: 15vh;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .flex-item{

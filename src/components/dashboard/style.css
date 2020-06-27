@@ -22,10 +22,12 @@ img{
 }
 
 .dashboard-container .dashboard-profile{
+    margin-top: 10vh;
     border-bottom-right-radius: 800px;
     border-top: 3px solid #0B8043;
     border-bottom: 3px solid 	#0B8043;
     border-top-left-radius: 300px;
+    box-shadow: 16px 21px 25px -12px rgba(0,0,0,0.75);
 }
 
 .dashboard-repositories{

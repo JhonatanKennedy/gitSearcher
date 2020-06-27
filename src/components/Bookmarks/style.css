@@ -16,9 +16,10 @@
     color:black;
     border-radius: 60px;
     border: 3px solid #3F51B5;
+    box-shadow: 21px 22px 18px 3px rgba(0,0,0,0.54);
 }
 .bookmark-profile a:hover{
-    box-shadow: 16px 21px 25px -12px rgba(0,0,0,0.75);
+    box-shadow: 21px 22px 18px 3px rgba(0,0,0,0.80);
 }
 .bookmark-avatar{
     width: 30vw;

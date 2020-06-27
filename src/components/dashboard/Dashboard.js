@@ -3,7 +3,7 @@ import './style.css';
 
 export default function Dashboard({ data, sort }){
     const profile = data.profile.data;
-    const repos = data.repos.data;
+    const repos = data.repos.data;  
 
     const reposSorted = repos.sort((a,b) => {
             if(sort === true){
@@ -34,8 +34,8 @@ export default function Dashboard({ data, sort }){
             <div className='dashboard-repositories'>
                 <ul>
                     {reposSorted.map(repos =>(
-                        <a href={repos.html_url}>
-                            <li key={repos.id}>
+                        <a href={repos.html_url} key={repos.id}>
+                            <li>
                                 <span><strong>Título:</strong>{repos.name}</span>
                                 <span><strong>Descrição:</strong>{repos.description}</span>
                                 <span><strong>Branch:</strong>{repos.default_branch}</span>

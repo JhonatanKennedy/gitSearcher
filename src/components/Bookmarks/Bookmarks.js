@@ -14,7 +14,7 @@ export default function Bookmarks(){
                             <img src={users.avatar_url} alt='profile'></img>
                         </div>
                         <div className='bookmark-info'>
-                            <strong>{users.name}</strong><br></br>
+                            <span><strong>{users.name}</strong></span><br></br>
                             <span><strong>Bios:</strong>{users.bio}</span><br></br>
                             <span><strong>Followers:</strong>{users.followers}</span><br></br>
                             <span><strong>Following:</strong>{users.following}</span><br></br>
