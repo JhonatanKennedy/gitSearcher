@@ -41,11 +41,12 @@ export default function Searcher({ callback }){
                 queue.map( obj => obj.id).indexOf(storageProfile.id) === -1){
                 setQueue([...queue,storageProfile]);
             }else{
-                setQueue([...queue.shift(),storageProfile]);
+                    setQueue(queue.shift());
+                    setQueue([...queue,storageProfile]);
             }
             
         }catch(err){
-            alert('Erro na busca desse usuário.')
+            alert('Erro na busca desse usuário.');
         }
     }
 
@@ -63,7 +64,7 @@ export default function Searcher({ callback }){
                             name='user'
                             type='input'
                             />
-                            <button type='submit'><FaSearch/></button>
+                            <button type='submit' name='button'><FaSearch/></button>
                             <ErrorMessage component='p' name='user'/>
                         </Form>
                     )}
